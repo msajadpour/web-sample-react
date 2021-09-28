@@ -1,16 +1,19 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import TopNav from './../components/TopNav';
 import Header from './../components/Header';
 import MainNav from './../components/MainNav';
 import Footer from './../components/Footer';
 
 const MainLayout = (props) => {
+    const {pathname} = props.location
     return (
         <React.Fragment>
             <div className="landing-layer">
                 <div className="container">
                     <TopNav />
-                    <Header />
+                    {pathname === '/' ? <Header /> : null}
+                    
                 </div>
             </div>
 
@@ -31,4 +34,4 @@ const MainLayout = (props) => {
     );
 };
 
-export default MainLayout;
+export default withRouter(MainLayout);

@@ -1,13 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const TopNav = () => {
+const  TopNav = () => {
     return (
         <nav>
             <div className="row">
                 <div className="col-sm-6 col-xs-12">
                     <ul>
                         <li>
-                            <a href=""> همکاری در فروش </a>
+                            <NavLink to="/" activeStyle={{color : 'lime'}}>صفحه اصلی </NavLink>
                             <a href=""> درباره ما </a>
                             <a href=""> تماس با ما </a>
                         </li>
@@ -15,14 +16,19 @@ const TopNav = () => {
                 </div>
                 <div className="col-sm-6 col-xs-12">
                     <div className="clientarea">
-                        <div className="loggein ">
+                        {/* <div className="loggein ">
                             <i className="zmdi zmdi-account"></i>
                             <a href=""> ایمان مدائنی ، خوش آمدی </a>
-                        </div>
-                        <div className="signin hidden">
+                        </div> */}
+                        <div className="signin ">
                             <i className="zmdi zmdi-account"></i>
-                            <a href=""> ورود </a> /<a href=""> عضویت </a>
+                            <NavLink to="/Login" activeStyle={{color : 'lime'}}>ورود</NavLink>
+                            &nbsp;
+                             /
+                             &nbsp;
+                            <NavLink to="/Register" activeStyle={{color : 'lime'}}>عضویت</NavLink>
                         </div>
+
                     </div>
                 </div>
             </div>
