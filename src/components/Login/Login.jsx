@@ -11,37 +11,56 @@ const Login = () => {
                 <div className="form-layer">
                     <form action="" method="">
                         <div className="input-group">
-                            <span className="input-group-addon" id="email-address">
+                            <span
+                                className="input-group-addon"
+                                id="email-address"
+                            >
                                 <i className="zmdi zmdi-email"></i>
                             </span>
-                            <input type="text" className="form-control" placeholder="ایمیل" aria-describedby="email-address" />
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="ایمیل"
+                                aria-describedby="email-address"
+                            />
                         </div>
 
                         <div className="input-group">
                             <span className="input-group-addon" id="password">
                                 <i className="zmdi zmdi-lock"></i>
                             </span>
-                            <input type="text" className="form-control" placeholder="رمز عبور " aria-describedby="password" />
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="رمز عبور "
+                                aria-describedby="password"
+                            />
                         </div>
 
                         <div className="remember-me">
                             <label>
-                                <input type="checkbox" name="" /> مرا بخاطر بسپار{" "}
+                                <input type="checkbox" name="" /> مرا بخاطر
+                                بسپار{" "}
                             </label>
                         </div>
 
                         <div className="link">
                             <a href="">
                                 {" "}
-                                <i className="zmdi zmdi-lock"></i> رمز عبور خود را فراموش کرده ام !
+                                <i className="zmdi zmdi-lock"></i> رمز عبور خود
+                                را فراموش کرده ام !
                             </a>
                             <a href="">
                                 {" "}
-                                <i className="zmdi zmdi-account"></i> عضویت در سایت{" "}
+                                <i className="zmdi zmdi-account"></i> عضویت در
+                                سایت{" "}
                             </a>
                         </div>
 
-                        <button className="btn btn-success"> ورود به سایت </button>
+                        <button className="btn btn-success">
+                            {" "}
+                            ورود به سایت{" "}
+                        </button>
                     </form>
                 </div>
             </div>

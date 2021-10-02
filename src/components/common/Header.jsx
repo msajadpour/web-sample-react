@@ -13,7 +13,11 @@ const Header = () => {
             </header>
             <div className="search-form">
                 <form>
-                    <input type="text" name="" placeholder="چی دوست داری یاد بگیری ؟" />
+                    <input
+                        type="text"
+                        name=""
+                        placeholder="چی دوست داری یاد بگیری ؟"
+                    />
                     <button>
                         <i className="zmdi zmdi-search"></i>
                     </button>

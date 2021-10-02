@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Courses = () => {
+const Course = () => {
     return (
         <section className="terms-items">
             <header>
                 <h2> آخرین دوره های تاپ لرن </h2>
-                <a href=""> مشاهده همه دوره ها </a>
+                <Link to="/archive"> مشاهده همه دوره ها </Link>
             </header>
             <div className="row">
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/1.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -23,9 +24,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/2.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -36,9 +37,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/3.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -49,9 +50,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/4.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -62,9 +63,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/5.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -75,9 +76,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/6.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -88,9 +89,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/7.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -101,9 +102,9 @@ const Courses = () => {
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
                     <article>
-                        <a href="" className="img-layer">
+                        <Link to="/course" className="img-layer">
                             <img src="images/pic/8.jpg" />
-                        </a>
+                        </Link>
                         <h2>
                             <a href=""> آموزش متریال دیاین در زامارین </a>
                         </h2>
@@ -116,4 +117,4 @@ const Courses = () => {
     );
 };
 
-export default Courses;
+export default Course;
