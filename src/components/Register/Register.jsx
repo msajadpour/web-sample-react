@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
+    const [userName, setUserName] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [privacy, setPrivacy] = useState(true);
+
+    const reset = () => {
+        setUserName('')
+        setEmail('')
+        setPassword('')
+    }
+    const handleSubmit = e => {
+        e.preventDefault();
+        let registerData = {
+            userName: userName,
+            email: email,
+            password: password,
+            privacyStatus: privacy,
+        };
+        console.log(registerData);
+        toast('ثبت شدند')
+        reset()
+    };
     return (
         <main className="client-page">
             <div className="container-content">
@@ -9,7 +34,7 @@ const Register = () => {
                 </header>
 
                 <div className="form-layer">
-                    <form action="" method="">
+                    <form onSubmit={handleSubmit}>
                         <div className="input-group">
                             <span className="input-group-addon" id="username">
                                 <i className="zmdi zmdi-account"></i>
@@ -19,6 +44,10 @@ const Register = () => {
                                 className="form-control"
                                 placeholder="نام و نام خانوادگی"
                                 aria-describedby="username"
+                                value={userName}
+                                onChange={e => {
+                                    setUserName(e.target.value);
+                                }}
                             />
                         </div>
 
@@ -34,25 +63,38 @@ const Register = () => {
                                 className="form-control"
                                 placeholder="ایمیل"
                                 aria-describedby="email-address"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
                             />
                         </div>
 
                         <div className="input-group">
-                            <span className="input-group-addon" id="password">
+                            <span
+                                className="input-group-addon"
+                                id="password"
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
                                 <i className="zmdi zmdi-lock"></i>
                             </span>
                             <input
-                                type="text"
+                                type={showPassword ? "text" : "password"}
                                 className="form-control"
                                 placeholder="رمز عبور "
                                 aria-describedby="password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
                             />
                         </div>
 
                         <div className="accept-rules">
                             <label>
-                                <input type="checkbox" name="" /> قوانین و
-                                مقررات سایت را میپذیرم{" "}
+                                <input
+                                    type="checkbox"
+                                    name=""
+                                    checked={privacy}
+                                    onChange={e => setPrivacy(e.target.checked)}
+                                />{" "}
+                                قوانین و مقررات سایت را میپذیرم{" "}
                             </label>
                         </div>
 
@@ -76,6 +118,7 @@ const Register = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer/>
         </main>
     );
 };
