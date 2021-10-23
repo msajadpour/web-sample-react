@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import Toplearn from "./Toplearn";
+import Toplearn from "./toplearn";
 
 const App = () => {
     return (
